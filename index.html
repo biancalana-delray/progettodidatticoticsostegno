@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Progetto: Giovanni Biancalana</title>
+    <style>
+        :root {
+            --primary-color: #006951;
+            --accent-color: #00D4A3;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.1rem 0.25rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            text-align: center;
+        }
+		.full-width {
+            grid-column: 1 / -1; /* tutto spazio */
+        }
+        /*griglia */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            gap: 2rem;
+        }
+
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .full-width .embed-container {
+                padding-top: 60%; /* Un po' più alta su mobile per leggibilità */
+            }	
+        }
+		@media (min-width: 769px) {
+            .full-width .embed-container {
+                padding-top: 45%; /* padding corretto */
+            }
+        }
+        .content-section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-section h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        /* embed container */
+        .embed-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /*16:9 */
+            background: #eee;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        .embed-container iframe, 
+        .embed-container embed, 
+        .embed-container object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Ottimizzazione per LIM (Large screens) */
+        @media (min-width: 1400px) {
+            main { max-width: 1300px; }
+            .content-section h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Storia in Linea: Repository di Progetto</h1>
+    <p>Documentazione digitale delle attività didattiche</p>
+</header>
+
+<main>
+    <section class="intro">
+        <p> Qui troverete il prodotto multimediale (TimelineJS) e le relative risorse utilizzate per adattarlo alla classe.</p>
+    </section>
+
+    <div class="content-grid">
+        
+
+        <!-- Form -->
+        <section class="content-section">
+            <h2> Screening Competenze</h2>
+            <p>Analisi delle competenze digitali e dei ruoli assegnati.</p>
+            <div class="embed-container">
+                <iframe src="https://forms.gle/wSxNvuYrQBAxEbjd8?embedded=true"></iframe>
+            </div>
+        </section>
+		 <!-- assegnazione -->
+		 <section class="content-section">
+            <h2> Istruzioni e assegnazione gruppi </h2>
+            <p> Assegnazione dei gruppi </p>
+            <div class="embed-container">
+                <!-- LINK -->
+              <iframe src="https://docs.google.com/document/d/e/2PACX-1vRkevlUVS61NBJxDy591WWLlZScOX2NGFRXDEJxsbAkDNeTdxT7zeCEip4HKjCxr-pSZfr1n2PuBRLC/pub?embedded=true"></iframe>	
+            </div>
+        </section>
+        <!-- TUTORIAL -->
+		<section class="content-section">
+            <h2> Tutorial</h2>
+            <p> tutorial mostrati alla classe </p>
+            <div class="embed-container">
+                <!-- LINK DEL FORM -->
+				<iframe src="https://docs.google.com/document/d/e/2PACX-1vRZUoHcNOxk-5jTokpObmv0NH650V48OIQTIQuc-0KC_y8dpoouhutWy-_YO1CRIkWYGfi95S_NUOa9/pub?embedded=true"></iframe> 
+			</div>
+        </section>
+        <!-- Sheet -->
+        <section class="content-section">
+            <h2> Database degli Eventi</h2>
+            <p>Il il database compilato.</p>
+            <div class="embed-container">
+                <!-- LINK SHEETS -->
+				<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSc-6yRM2jv7kUDiyd4ZIeCfR5UBKey2Nj12yonkNaXpOSI9aMFNa3CLWceOWBPUd6cI0K8s8lXz0zA/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+        </section>
+
+
+        <!-- TimelineJS -->
+        <section class="content-section full-width">
+            <h2> Timeline Interattiva</h2>
+            <p>Sviluppo cronologico del periodo romano-barbarico e giustinianeo.</p>
+            <div class="embed-container">
+                <!-- QUI L'IFRAME DI TIMELINEJS -->
+                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vSswLjkOddh2SqLXTbNjUrDzvabTnGI5y-ZCfmvDXaeCakeOSFo7j4P36JK3YklFTK6suKXe8cV7Q3x&font=Default&lang=it&initial_zoom=2&width=100%25&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+            </div>
+        </section>
+
+		<!--  FORM FINALE-->
+        <section class="content-section full-width">
+            <h2>Screening metacognitivo</h2>
+            <p> sondaggio di feedback per l'aspetto metacognitivo .</p>
+            <div class="embed-container">
+                <!-- IFRAME DEL FORM -->
+             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqjMWuUmEMGLdzfS-kTCgvLFOugpQGtd8OgmUvhCo806Cp1w/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+
+
+    </div>
+</main>
+
+<footer>
+    <p>Progetto realizzato da: Giovanni Biancalana</p>
+</footer>
+
+</body>
+</html>
